@@ -1,4 +1,4 @@
-#require 'capybara'
+
 require '../Battle/app'
 require 'spec_helper'
 
