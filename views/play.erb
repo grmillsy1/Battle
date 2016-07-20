@@ -2,9 +2,8 @@
 <h2> <%= @game.player_1.name %> vs. <%= @game.player_2.name %> </h2>
 
 <p> Both players starting with 60HP </p>
-<p> <%= @game.player_1.name %>: 60HP </p>
-<p> <%= @game.player_2.name %>: 60HP </p>
-
+<p> <%= @game.player_1.name %>: <%= @game.player_1.hit_points %>HP </p>
+<p> <%= @game.player_2.name %>: <%= @game.player_2.hit_points %>HP </p>
 
 
 <div id="attack_button">
