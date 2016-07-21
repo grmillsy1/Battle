@@ -2,7 +2,7 @@ require_relative 'player'
 
 class Game
 
-attr_reader :player_1, :player_2, :opponent, :attacker
+attr_reader :player_1, :player_2, :opponent, :attacker, :power
 
   def initialize(player_1, player_2)
     @player_1 = player_1
@@ -32,8 +32,13 @@ attr_reader :player_1, :player_2, :opponent, :attacker
     !!loser
   end
 
+  def amount
+    power = rand(1..10)
+    @power = power
+  end
+
   def attack(player)
-    player.receive_damage
+    player.receive_damage(amount)
   end
 
 end
