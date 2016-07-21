@@ -11,6 +11,14 @@ attr_reader :player_1, :player_2, :opponent, :attacker
     @opponent = @player_2
   end
 
+  def self.create(player_1, player_2)
+    @game= Game.new(player_1, player_2)
+  end
+
+  def self.instance
+    @game
+  end
+
   def swap_turn
     @attacker, @opponent = @opponent, @attacker
   end
