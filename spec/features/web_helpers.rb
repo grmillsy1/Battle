@@ -4,3 +4,8 @@ def sign_in_and_play
   fill_in "player_2", with: "Dos"
   click_button "Submit names"
 end
+
+def attack
+  click_button "Attack!!"
+  click_button 'OK'
+end

@@ -3,8 +3,8 @@ require 'game'
 describe Game do
 
   subject(:game) { described_class.new(player_1, player_2) }
-  let(:player_1) { double :player }
-  let(:player_2) { double :player }
+  let(:player_1) { double :player, hit_points: 10 }
+  let(:player_2) { double :player, hit_points: 0  }
 
   describe '#attack' do
     it 'damages the player' do
@@ -38,6 +38,18 @@ describe Game do
       game.swap_turn
       expect(game.attacker).to eq player_2
       expect(game.opponent).to eq player_1
+    end
+  end
+
+  describe '#loser' do
+    it 'returns player 2 when hp = 0' do
+      expect(game.loser).to eq player_2
+    end
+  end
+
+  describe '#game_over?' do
+    it 'returns true when game is over' do
+      expect(game.game_over?).to eq true
     end
   end
 
