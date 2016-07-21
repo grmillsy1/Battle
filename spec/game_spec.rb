@@ -23,4 +23,23 @@ describe Game do
       expect(game.player_2).to eq player_2
     end
   end
+  describe '#attacker' do
+    it 'starts as player 1' do
+      expect(game.attacker).to eq player_1
+    end
+  end
+  describe '#opponent' do
+    it 'starts as player 2' do
+      expect(game.opponent).to eq player_2
+    end
+  end
+  describe '#swap_turn' do
+    it 'swaps attacker and opponent' do
+      game.swap_turn
+      expect(game.attacker).to eq player_2
+      expect(game.opponent).to eq player_1
+    end
+  end
+
+
 end

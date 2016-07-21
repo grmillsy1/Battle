@@ -4,7 +4,7 @@
 <p> Both players starting with 60HP </p>
 <p> <%= @game.player_1.name %>: <%= @game.player_1.hit_points %>HP </p>
 <p> <%= @game.player_2.name %>: <%= @game.player_2.hit_points %>HP </p>
-
+<h3><%= @game.attacker.name %>'s turn</h3>
 
 <div id="attack_button">
   <form action="/attack" method="get">

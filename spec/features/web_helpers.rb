@@ -1,6 +1,6 @@
 def sign_in_and_play
   visit ('/')
-  fill_in "player_1", :with => "Dan"
-  fill_in "player_2", :with => "Yuri"
+  fill_in "player_1", with: "Uno"
+  fill_in "player_2", with: "Dos"
   click_button "Submit names"
 end
